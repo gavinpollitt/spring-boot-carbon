@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: hello-service
+  carbon-aware:
+    enabled: true
+    endpoint: ${CARBON_AWARE_ENDPOINT}
+    location: ${EMISSIONS_LOCATION:westus2}
+
+  sleuth:
+    otel:
+      exporter:
+        otlp:
+          endpoint: http://otel-collector:4317
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+weatherServiceForecast:
+  baseUrl: ${weatherServiceForecast_baseUrl:http://localhost:8081}
+server:
+  port: 8082
