@@ -34,7 +34,7 @@ This service uses the **PowerUtilizationEnergyConsumptionProvider** provider of 
 
 *May be a case of identifying the VM types on EC2 and utilising the following to harvest power info: https://doc.api.boavizta.org/Reference/format/component_route/ as described in https://medium.com/teads-engineering/estimating-aws-ec2-instances-power-consumption-c9745e3479597.
 
-### Current View
+#### Current View
 May be removing Carbon-Aware-SDK as dependency and:
 - Identify CPU/Memory/Network usage metrics
 - Grab EC2 instance from **oshi**
